@@ -145,7 +145,7 @@ header{display:flex;align-items:center;justify-content:center;padding:12px 20px;
 .cc{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;font-size:21px;font-weight:600;}
 
 /* 580px block removed - consolidated below */
-::-webkit-scrollbar{width:4px;} ::-webkit-scrollbar-thumb{background:var(--bd);}
+::-webkit-scrollbar{width:4px} ::-webkit-scrollbar-thumb{background:var(--bd)}
 
 /* TIMER */
 .timer-wrap{display:flex;flex-direction:column;align-items:center;gap:3px;}
@@ -584,3 +584,4 @@ header, #app > .scr, #app > * {
   .cell{min-height:60px;} .cm{font-size:18px;}
   .btn-sm{font-size:11px;padding:4px 5px;}
 }
+html::-webkit-scrollbar{width:6px}html::-webkit-scrollbar-track{background:#050507}html::-webkit-scrollbar-thumb{background:#e8002d;border-radius:3px}html::-webkit-scrollbar-thumb:hover{background:#9b001e}html{scrollbar-width:thin;scrollbar-color:#e8002d #050507}
