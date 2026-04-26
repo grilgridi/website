@@ -688,3 +688,5 @@ select.race-select option { background:var(--jet); }
   transform: translateY(-1px);
   box-shadow: 0 4px 20px rgba(232,0,45,.4);
 }
+
+html::-webkit-scrollbar{width:6px}html::-webkit-scrollbar-track{background:#050507}html::-webkit-scrollbar-thumb{background:#e8002d;border-radius:3px}html::-webkit-scrollbar-thumb:hover{background:#9b001e}html{scrollbar-width:thin;scrollbar-color:#e8002d #050507}
