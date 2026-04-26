@@ -38,8 +38,8 @@ html, body {
   background: var(--void);
   color: var(--ivory);
   font-family: 'Teko', sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
+  height: 100%;
 }
 body::-webkit-scrollbar { display: none; }
 body { -ms-overflow-style: none; scrollbar-width: none; }
@@ -223,7 +223,8 @@ main { position: relative; }
 .search-input::placeholder { color: var(--dim); }
 
 .dropdown {
-  position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+  position: fixed; left: auto; right: auto;
+  width: 480px;
   background: var(--gunmetal); border: 1px solid var(--steel);
   border-radius: 5px; max-height: 240px; overflow-y: auto;
   z-index: 100; display: none;
