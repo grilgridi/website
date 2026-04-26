@@ -41,8 +41,6 @@ html, body {
   overflow: hidden;
   height: 100%;
 }
-body::-webkit-scrollbar { display: none; }
-body { -ms-overflow-style: none; scrollbar-width: none; }
 
 body::after {
   content: '';
@@ -515,3 +513,4 @@ main { position: relative; }
   .htp-nat-note { font-size: 11px; padding: 8px; line-height: 1.4; }
   .htp-col-item { font-size: 12px; padding: 5px 7px; }
 }
+html::-webkit-scrollbar{width:6px}html::-webkit-scrollbar-track{background:#050507}html::-webkit-scrollbar-thumb{background:#e8002d;border-radius:3px}html::-webkit-scrollbar-thumb:hover{background:#9b001e}html{scrollbar-width:thin;scrollbar-color:#e8002d #050507}
