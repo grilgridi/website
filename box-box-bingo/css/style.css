@@ -211,3 +211,5 @@ input{font-family:'Teko',sans-serif}
 .htp-section-text strong{color:var(--ivory);font-weight:700}
 .htp-back-btn{display:inline-flex;align-items:center;gap:9px;padding:13px 32px;font-family:'Teko',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(30,30,50,.7);border:1px solid rgba(150,150,180,.25);color:var(--silver);cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background .2s,color .2s}
 .htp-back-btn:hover{background:rgba(50,50,80,.9);color:var(--ivory)}
+
+html::-webkit-scrollbar{width:6px}html::-webkit-scrollbar-track{background:#050507}html::-webkit-scrollbar-thumb{background:#e8002d;border-radius:3px}html::-webkit-scrollbar-thumb:hover{background:#9b001e}html{scrollbar-width:thin;scrollbar-color:#e8002d #050507}
