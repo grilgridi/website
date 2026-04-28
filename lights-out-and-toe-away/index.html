@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr" class="dark">
 <head>
   <meta charset="UTF-8">
-<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAAGtUlEQVR4nIVWXY8cRxW991Z1dU/3zM7seta7zvoj8VcCsQNBskUkK8hCspAQvPoB/gEPye8JL0gI+AE8GAnJEhCjRFEA+TMxxo69651Z7+yOZ6enZ6ar6l4eaqZ3MFjUQ8+oqvrcuufernNwZaVNRIiolEJEmg9ErCYXh4iEJzOLCAB472U+eGEAgFKKEBEAwvO/R4B4ZSaMEO9/7gEAIjLGOOf064D+b4xqKSS0uIqIxpjxeMzMswCLeYRMA0+vgFaJvi5qeDGO46IoAqB+/cGBWYgOcRExnDusBsxw/BAvoCdJMhqNvPfhLXolflU6AAnJAMi8wIAI4Q8RAAgRzsOACBNRrZYURREiBRxdJbvIABGEPtKaiJQIEBEAEIXzQtVIiEjknSu1VsaY4XDoHCNiaK1ZgFdaSESsdWHOWjAm9l5EuOrRCj3wZq1VCmu1eDgceu+V0lXjzigKtCxSJMJVn1hrtVZV/UVEax3Qq6omSZLnufcekbz3ABC+JADAVmslHKr6uOYso1JKxIsAkVpsnsUWIiSlqSynzAKAAMB8uI2ZdcA9/IABZhwAAIBSCgERaU4jzrkCARYBrSNrp0pRHBvv2XtPBOyFhUWEiDSzCLF2nlAPxSeKIqSJQqO47qO8HE1A2Gnj2WTKsTUYO2IRMKwgQhjnllglyXTiSzeJRVgiMAqtJULvRaOICFpiV+Znlo9s+tHEcd3SgTUK+mkWvZGl7fqS8dTMsjvPt54NJloTRVqEpk4aYnRptQfv1ZhoapwpvffMzEQaQDQDa1He+rfr9V8cPWrfXP9yIr+/89mGnX5
 <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale=1.0>
 <title>Lights Out & Toe Away</title>
 <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
@@ -14,7 +13,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5660759941665974" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<!-- Fixed background layer - works on iOS/Android unlike CSS fixed backgrounds -->
 <div id="bg-layer" aria-hidden="true"></div>
 <div id="app">
 <header>
@@ -33,7 +32,7 @@
   <button class="btn btn-s btn-sm" onclick="showS('howto')" style="margin-top:8px;margin-bottom:4px;">How to Play</button>
   <div class="mode-grid">
     <button class="mode-card mode-same" onclick="openGameTab('same')">
-      <img class="mode-img" src="data:image/png;base64,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
+      <img class="mode-img" src="data:image/png;base64,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" alt="Same Screen"/>
       <div class="mode-name">Same Screen</div>
       <div class="mode-desc">Two players, one device</div>
     </button>
@@ -48,18 +47,19 @@
       <div class="mode-desc">Challenge somebody</div>
     </button>
     <button class="mode-card mode-custom" onclick="openGameTab('custom')">
-      <img class="mode-img" src="data:image/png;base64,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
+      <img class="mode-img" src="data:image/png;base64,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" alt="Custom Game"/>
       <div class="mode-name">Custom Game</div>
       <div class="mode-desc">Pick your own categories</div>
     </button>
   </div>
 </div>
 
+
 <div id="roomlobby" class="scr">
   <div class="lobby-wrap">
     <div class="lobby-title">PRIVATE ROOM</div>
 
-    
+    <!-- CREATE ROOM -->
     <div class="lobby-section">
       <div class="lobby-section-label">— CREATE A PRIVATE ROOM</div>
       <p class="lobby-desc">Start a new room and share the link or code with your friends.</p>
@@ -71,7 +71,7 @@
 
     <div class="lobby-or">OR</div>
 
-    
+    <!-- JOIN ROOM -->
     <div class="lobby-section">
       <div class="lobby-section-label">— JOIN A ROOM</div>
       <div class="lobby-join-row">
@@ -83,6 +83,7 @@
   </div>
 </div>
 
+<!-- ROOM CREATED screen: shows code + QR + share link -->
 <div id="roomcreated" class="scr">
   <div class="lobby-wrap">
     <button class="btn btn-s btn-sm back-btn" onclick="leaveRoom()">← Back</button>
@@ -131,6 +132,7 @@
   </div>
 </div>
 
+<!-- MATCHMAKING screen for Play Online -->
 <div id="matchmaking" class="scr">
   <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 60px);gap:28px;">
     <div class="lobby-title" style="color:var(--green);margin:0;">FINDING OPPONENT</div>
@@ -155,6 +157,7 @@
   </div>
 </div>
 
+<!-- CUSTOM GAME PICKER -->
 <div id="custompicker" class="scr" style="touch-action:pan-y;">
   <div class="gh">
     <div class="gh-left">
@@ -188,11 +191,11 @@
     </div>
   </div>
 
-  
+  <!-- Same grid structure as game-same -->
   <div class="gw" id="cpick-gw">
-    
+    <!-- corner -->
     <div class="corner"></div>
-    
+    <!-- 3 column header slots -->
     <div class="cl cpick-col-cell empty" id="cpick-col-0" onclick="cpickOpenPanel('col',0)">
       <div class="cpick-slot-add"><span class="cpick-plus">+</span><div class="cpick-add-label">ADD</div></div>
     </div>
@@ -202,21 +205,21 @@
     <div class="cl cpick-col-cell empty" id="cpick-col-2" onclick="cpickOpenPanel('col',2)">
       <div class="cpick-slot-add"><span class="cpick-plus">+</span><div class="cpick-add-label">ADD</div></div>
     </div>
-    
+    <!-- Row 0 -->
     <div class="cl row-cl cpick-row-cell empty" id="cpick-row-0" onclick="cpickOpenPanel('row',0)">
       <div class="cpick-slot-add"><span class="cpick-plus">+</span><div class="cpick-add-label">ADD</div></div>
     </div>
     <div class="cell cpick-game-cell"></div>
     <div class="cell cpick-game-cell"></div>
     <div class="cell cpick-game-cell"></div>
-    
+    <!-- Row 1 -->
     <div class="cl row-cl cpick-row-cell empty" id="cpick-row-1" onclick="cpickOpenPanel('row',1)">
       <div class="cpick-slot-add"><span class="cpick-plus">+</span><div class="cpick-add-label">ADD</div></div>
     </div>
     <div class="cell cpick-game-cell"></div>
     <div class="cell cpick-game-cell"></div>
     <div class="cell cpick-game-cell"></div>
-    
+    <!-- Row 2 -->
     <div class="cl row-cl cpick-row-cell empty" id="cpick-row-2" onclick="cpickOpenPanel('row',2)">
       <div class="cpick-slot-add"><span class="cpick-plus">+</span><div class="cpick-add-label">ADD</div></div>
     </div>
@@ -225,7 +228,7 @@
     <div class="cell cpick-game-cell"></div>
   </div>
 
-  
+  <!-- Category selection modal -->
   <div class="cpick-panel" id="cpick-panel" onclick="cpickPanelBgClick(event)">
     <div class="cpick-panel-inner">
       <div class="cpick-panel-header">
@@ -397,12 +400,14 @@
   <div class="res-countdown" id="res-countdown"></div>
 </div>
 
+<!-- Disconnect overlay for room mode -->
 <div id="disconnect-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;flex-direction:column;align-items:center;justify-content:center;gap:24px;">
   <div style="font-size:48px;">🔌</div>
   <div id="disconnect-msg" style="font-family:'Teko',sans-serif;font-size:32px;letter-spacing:3px;color:var(--red);text-align:center;"></div>
   <button class="btn btn-s" onclick="goHome()" style="margin-top:8px;">← Back to Home</button>
 </div>
 
+<!-- Quit-confirm overlay (replaces browser confirm dialog) -->
 <div id="quit-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9998;flex-direction:column;align-items:center;justify-content:center;gap:24px;">
   <div style="font-size:48px;">🚪</div>
   <div style="font-family:'Teko',sans-serif;font-size:28px;letter-spacing:3px;color:var(--red);text-align:center;">Leave the game?</div>
@@ -412,6 +417,8 @@
     <button class="btn btn-p" onclick="confirmQuitYes()">← Leave</button>
   </div>
 </div>
+
+
 
 <section id="info-footer" style="display:none;
   background:
@@ -442,7 +449,7 @@
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" id="footer-grid">
 
-      
+      <!-- TOP 5 CIRCUITS -->
       <div style="
         background:rgba(255,255,255,0.03);
         border:1px solid rgba(255,255,255,0.07);
@@ -504,7 +511,7 @@
         </div>
       </div>
 
-      
+      <!-- TOP 3 TEAMS -->
       <div style="
         background:rgba(255,255,255,0.03);
         border:1px solid rgba(255,255,255,0.07);
